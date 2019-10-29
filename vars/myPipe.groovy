@@ -1,5 +1,8 @@
-def call(Map settings = [:]) {
-    agent any
+def call( Map settings = [:] ) {
+    node('master'){
     stages {
-           stage('build') { steps { sh 'echo Building ${BRANCH_NAME}...' }}
-}}
+           stage('build') { steps { sh 'echo Building ${BRANCH_NAME}...' }
+     }
+    }
+}
+}
