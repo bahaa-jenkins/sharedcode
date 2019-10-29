@@ -1,6 +1,7 @@
 def call( Map settings = [:] ) {
     node('master'){
-           stage('build') { steps { sh 'echo Building ${BRANCH_NAME}...' }
+           stage('build') {
+               step { sh 'echo Building ${BRANCH_NAME}...' }
      }
     }
 }
