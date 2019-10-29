@@ -1,8 +1,5 @@
 
 def call(Map settings = [:]) {
-
-
-//    pipeline {
     agent any
     stages {
             stage('build') {
@@ -11,6 +8,4 @@ def call(Map settings = [:]) {
                                   }
                            }
            }
- // }
-
 }
